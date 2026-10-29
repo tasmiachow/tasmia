@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasmia Chowdhury</title>
+
+  <!-- Gates the "hidden until animated" CSS. If GSAP fails to load, hero.js removes it. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Shared SVG filter: the "scrappy" wobble on hand-drawn shapes -->
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <header class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <!-- Greeting + mint swoosh -->
+  <div class="greeting-wrap">
+  <h1 class="greeting">
+    <span class="greeting__hi">Hi I’m</span>
+    <span class="greeting__name">Tasmia</span>
+  </h1>
+</div>
+
+    <!-- Role: flips from the front face to the back face -->
+    <p class="role">
+      <span class="role__face">Software Engineer</span>
+      <span class="role__face">Product Builder</span>
+      <span class="role__face">Full Stack Developer</span>
+    </p>
+
+    <!-- Portrait: lavender circle wipes in like a clock, photo sits on top -->
+    <div class="portrait">
+     
+      <!-- Needs a transparent-background PNG cutout so she overlaps the circle -->
+      <img class="photo" src="images/tas_cutout.png" alt="Portrait of Tasmia" width="800" height="1000">
+    </div>
+
+    <!-- Scroll cue: appears after the intro, real link so it works without JS -->
+   <a class="scroll-cue" href="#about" aria-label="Scroll down to About">
+    <span class="scroll-cue__gems">
+      <svg class="gem gem--pink" viewBox="0 0 100 90" aria-hidden="true" focusable="false">
+        <polygon points="0,0 100,0 50,29" fill="#FFEAF8"/>
+        <polygon points="0,0 50,29 50,86" fill="#FFD5F2"/>
+        <polygon points="100,0 50,86 50,29" fill="#F3B4DE"/>
+      </svg>
+      <svg class="gem gem--lavender" viewBox="0 0 100 90" aria-hidden="true" focusable="false">
+        <polygon points="0,0 100,0 50,29" fill="#F0EEFF"/>
+        <polygon points="0,0 50,29 50,86" fill="#D4D1FA"/>
+        <polygon points="100,0 50,86 50,29" fill="#B4AFEA"/>
+      </svg>
+    </span>
+</a>
+
+  </header>
+
+  <!-- Placeholder so the arrow has somewhere to land -->
+  <main>
+    <section id="about" class="placeholder"><p>About goes here.</p></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+</html>
