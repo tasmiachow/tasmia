@@ -10,13 +10,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Shared SVG filter: the "scrappy" wobble on hand-drawn shapes -->
+
   <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
     <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
       <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
@@ -26,7 +26,7 @@
 
   <header class="hero" id="top">
     <div class="hero__glow" aria-hidden="true"></div>
-    <!-- Greeting + mint swoosh -->
+    <!-- Greeting  -->
   <div class="greeting-wrap">
   <h1 class="greeting">
     <span class="greeting__hi">Hi I’m</span>
@@ -41,10 +41,10 @@
       <span class="role__face">Full Stack Developer</span>
     </p>
 
-    <!-- Portrait: lavender circle wipes in like a clock, photo sits on top -->
+    <!-- Portrait -->
     <div class="portrait">
      
-      <!-- Needs a transparent-background PNG cutout so she overlaps the circle -->
+      <!--  -->
       <img class="photo" src="images/tas_cutout.png" alt="Portrait of Tasmia" width="800" height="1000">
     </div>
 
@@ -66,10 +66,24 @@
 
   </header>
 
-  <!-- Placeholder so the arrow has somewhere to land -->
+  <!-- About Section -->
   <main>
-    <section id="about" class="placeholder"><p>About goes here.</p></section>
-  </main>
+  <section id="about" class="about">
+    <h2 class="section__title">About Me</h2>
+
+    <div class="about__wrapper">
+      <div class="about__portrait">
+        <video autoplay loop muted playsinline aria-hidden="true">
+          <source src="./images/portrait.webm" type="video/webm">
+        </video>
+      </div>
+
+      <div class="textbox">
+        <p>Lorem Ipsum</p>
+      </div>
+    </div>
+  </section>
+</main>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
