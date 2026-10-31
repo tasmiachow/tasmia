@@ -148,7 +148,7 @@ img { display: block; max-width: 100%; height: auto; }
   position: absolute;
   right: 4%;
   bottom: 0;
-  width: 78%;
+  width: 100%;
   height: auto;
 }
 /* ---- Lavender glow behind the portrait ---- */
@@ -303,6 +303,37 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 
+
+.layout-container {
+  display: grid;
+  /* Create 3 equal columns */
+  grid-template-columns: repeat(3, 1fr); 
+  /* Space between all squares */
+  gap: 16px; 
+  width: 100%;
+  max-width: 500px;
+}
+
+.box {
+  background-color: #0ea5e9; /* Tailwind sky-500 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Make the big square span all 3 columns */
+.large-square {
+  grid-column: span 3;
+  /* Keeps it a square based on its width */
+  aspect-ratio: 3 / 2; 
+}
+
+/* Make the smaller items perfect squares */
+.small-square {
+  aspect-ratio: 1 / 1; 
+}
 
 
 /* ==================================================================
