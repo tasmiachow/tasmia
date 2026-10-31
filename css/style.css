@@ -3,19 +3,19 @@
    ========================================================================== */
 :root {
   /* Palette */
-  --cream: #FFFBEA;
-  --lavender: #DFDDFF;
+  --cream: #F6F2FF;
+  --lavender: #BEA0FF;
   --mint: #D9FEE1;
   --pink: #FFD5F2;
-  --navy: #042A3F;
-  --ink: #1A1A1A; /* "almost black" for everything else */
+  --navy: #5B21D4;
+  --ink: #1B1033; /* "dark purple almost black" for everything else */
 
   /* Type */
-  --font-script: "Pinyon Script", cursive;
-  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-pixel: "Geist Pixel", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 
   /* Roles (swap these to restyle without touching components) */
-  --font-greeting: var(--font-script);
+  --font-greeting: var(--font-pixel);
   --font-role: var(--font-sans);
 
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
@@ -241,7 +241,7 @@ img { display: block; max-width: 100%; height: auto; }
   position: relative;
   z-index: 1;
   padding-left: var(--text-inset);    /* lines up with the hero greeting */
-  font-family: var(--font-script);
+  font-family: var(--font-pixel);
   font-weight: 400;
   color: var(--ink);
   font-size: clamp(4.5rem, 14vw, 13rem);
@@ -337,7 +337,7 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .greeting__hi {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(1.5rem, 9vw, 3rem);
     padding-left: 0;
   }
 
